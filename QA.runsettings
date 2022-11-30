@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RunSettings>
+  <RunConfiguration>
+    <EnvironmentVariables>
+      <TestBrowser>Chrome</TestBrowser>
+      <EnvironmentName>QA</EnvironmentName>
+      <HeadlessBrowserTests>false</HeadlessBrowserTests>
+    </EnvironmentVariables>
+  </RunConfiguration>
+
+  <SpecRun>
+    <Profile>QA.srprofile</Profile>
+  </SpecRun>
+</RunSettings>

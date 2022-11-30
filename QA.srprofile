@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TestProfile xmlns="http://specflow.org/schemas/plus/TestProfile/1.5">
+  <Settings projectName="apiPrepTestingFramework.QA" />
+  <Execution stopAfterFailtures="0" testThreadCount="1" testSchedulingMode="Sequential" retryFor="None" />
+
+  <Filter>!tagmatch:ToDo</Filter>
+
+  <TestAssemblyPaths>
+    <TestAssemblyPath>apiPrepTestingFramework.QA.dll</TestAssemblyPath>
+  </TestAssemblyPaths>
+  <DeploymentTransformation>
+    <Steps>
+      
+    </Steps>
+  </DeploymentTransformation>
+
+  <Targets>
+    <Target name ="EnvironmentName">
+      <DeploymentTransformationSteps>
+        <EnvironmentVariable variable="EnvironmentName" value="QA" />
+      </DeploymentTransformationSteps>      
+    </Target>
+  </Targets>
+</TestProfile>

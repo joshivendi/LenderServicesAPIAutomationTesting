@@ -1,0 +1,65 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="6.4.0" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="coverlet.collector" Version="3.2.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="DotNetSeleniumExtras.WaitHelpers" Version="3.11.0" />
+    <PackageReference Include="Enums.NET" Version="4.0.0" />
+    <PackageReference Include="FluentAssertions" Version="6.8.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+    <PackageReference Include="Microsoft.Azure.Cosmos" Version="3.31.2" />
+    <PackageReference Include="Microsoft.Azure.DocumentDB" Version="2.18.0" />
+    <PackageReference Include="Microsoft.Azure.DocumentDB.Core" Version="2.18.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="MSTest.TestAdapter" Version="2.2.10" />
+    <PackageReference Include="MSTest.TestFramework" Version="2.2.10" />
+    <PackageReference Include="NUnit" Version="3.13.3" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.2.1" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.4.0" />
+    <PackageReference Include="RestSharp" Version="106.15.0" />
+    <PackageReference Include="RestSharp.Serializers.NewtonsoftJson" Version="106.12.0" />
+    <PackageReference Include="Selenium.Support" Version="4.6.0" />
+    <PackageReference Include="Selenium.WebDriver" Version="4.6.0" />
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="107.0.5304.6200" />
+    <PackageReference Include="SpecFlow" Version="3.9.74" />
+    <PackageReference Include="SpecFlow.Autofac" Version="3.9.74" />
+    <PackageReference Include="SpecFlow.NUnit" Version="3.9.74" />
+    <PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.9.74" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\joshu\.nuget\packages\selenium.webdriver\4.6.0\build\..\manager\linux\selenium-manager" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\joshu\.nuget\packages\selenium.webdriver\4.6.0\build\..\manager\macos\selenium-manager" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\joshu\.nuget\packages\selenium.webdriver\4.6.0\build\..\manager\windows\selenium-manager.exe" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="appsettings.QA.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
