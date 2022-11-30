@@ -9782,11 +9782,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\joshua.hughes_ivendi\\source\\repos\\apiPrepTestingFramework\\apiPrepTestingFramework.QA\\apiPrepTestingFramework.QA\\apiPrepTestingFramework.QA.csproj",
+      "projectUniqueName": "C:\\Users\\joshua.hughes_ivendi\\source\\repos\\LenderServiceAutomationAPITesting\\apiPrepTestingFramework.QA\\apiPrepTestingFramework.QA\\apiPrepTestingFramework.QA.csproj",
       "projectName": "apiPrepTestingFramework.QA",
-      "projectPath": "C:\\Users\\joshua.hughes_ivendi\\source\\repos\\apiPrepTestingFramework\\apiPrepTestingFramework.QA\\apiPrepTestingFramework.QA\\apiPrepTestingFramework.QA.csproj",
+      "projectPath": "C:\\Users\\joshua.hughes_ivendi\\source\\repos\\LenderServiceAutomationAPITesting\\apiPrepTestingFramework.QA\\apiPrepTestingFramework.QA\\apiPrepTestingFramework.QA.csproj",
       "packagesPath": "C:\\Users\\joshua.hughes_ivendi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\joshua.hughes_ivendi\\Source\\Repos\\apiPrepTestingFramework\\apiPrepTestingFramework.QA\\apiPrepTestingFramework.QA\\obj\\",
+      "outputPath": "C:\\Users\\joshua.hughes_ivendi\\source\\repos\\LenderServiceAutomationAPITesting\\apiPrepTestingFramework.QA\\apiPrepTestingFramework.QA\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\joshua.hughes_ivendi\\AppData\\Roaming\\NuGet\\NuGet.Config",
