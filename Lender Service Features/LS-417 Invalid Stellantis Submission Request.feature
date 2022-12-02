@@ -8,8 +8,6 @@ I expect to get a failed result
 Scenario: error message displayed, vechile milage over 60000
 	Given I have set the endpoint to <template>
 	And I have added a body with a invalid milage over 6000
-	When I create a POST request
-	When I get a response back
 	Then I should receive a Bad request response code
 	And I am displayed the correct error message for incorrect vechile input
 

@@ -28,7 +28,14 @@ namespace apiPrepTestingFramework.QA.Lender_Services_Steps
             restRequest.AddJsonBody(new DealershipIdList()
             {
                 DealershipId = _config.DealershipId()
+
             });
+        }
+
+        [Given(@"I have added a body with a invalid milage over (.*)")]
+        public void GivenIHaveAddedABodyWithAInvalidMilageOver(int p0)
+        {
+            var restRequest = Helper.CreatePostRequest();
         }
     }
 }

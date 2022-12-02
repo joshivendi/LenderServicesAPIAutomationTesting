@@ -40,7 +40,10 @@ namespace apiPrepTestingFramework.QA.Lender_Services_Steps
         [Then(@"I should receive a Bad request response code")]
         public void ThenIShouldReceiveABadRequestResponseCode()
         {
-            var response = _context.Get<IRestResponse>("apiResponse");
+            var response = Helper.GetResponse();
+            _context.Add("apiResponse", response);
+            Console.WriteLine(response.Content);
+            _context.Get<IRestResponse>("apiResponse");
             Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.BadRequest));
         }
 
