@@ -5,6 +5,8 @@ using RestSharp.Serializers.NewtonsoftJson;
 using System.IO;
 using System.Collections.Generic;
 using apiPrepTestingFramework.QA.Extensions;
+using System.Collections.Specialized;
+using System;
 
 namespace apiPrepTestingFramework.QA.Helpers
 {
@@ -30,6 +32,30 @@ namespace apiPrepTestingFramework.QA.Helpers
             });
             Client.RemoteCertificateValidationCallback += (sender, certificate, chain, sslPolicyErrors) => true;
             return Client;
+        }
+
+        public static string SetValidAPIKey(IConfiguration _config, string environment)
+        {
+            var url = _config.baseUrl().ToString();
+            var Client = new RestClient();
+            Client.BaseUrl = new Uri(_config.baseUrl());
+
+            var tokenClient = new RestClient(url);
+            var request = new RestRequest(Method.POST);
+
+            request.Parameters.ToString();
+            request.AddHeader("ApiKey", _config.lenderServiceV3ValidApiKey());
+
+            IRestResponse response = tokenClient.Execute(request);
+
+            if (response.Content.Contains("access_token"))
+            {
+                var token = JsonConvert.DeserializeObject<Dictionary<string, object>>(response.Content)["access_token"].ToString();
+                return token;
+            }
+
+            else
+                return response.ToString();
         }
 
         public static string GetToken(string clientId, string clientSecret, string apiKey, string apiPassword, IConfiguration _config)

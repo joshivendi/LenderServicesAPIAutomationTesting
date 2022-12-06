@@ -23,7 +23,7 @@ namespace apiPrepTestingFramework.QA.Models
             public object ApplicantIsBoardMemberOrDirector { get; set; }
             public object ApplicantCountryOfOperation { get; set; }
             public object ApplicantMarketingDisclaimerVersionId { get; set; }
-            public Applicant[] Applicants { get; set; }
+            public List<Applicant> Applicants { get; set; }
             public object IARProspectId { get; set; }
             public bool ArrangedByPhone { get; set; }
             public bool ArrangedInShowroom { get; set; }
@@ -138,8 +138,8 @@ namespace apiPrepTestingFramework.QA.Models
 
         public class Applicant
         {
-            public Addresseshistory[] AddressesHistory { get; set; }
-            public Employmenthistory[] EmploymentHistory { get; set; }
+            public List<Addresseshistory> AddressesHistory { get; set; }
+            public List<Employmenthistory> EmploymentHistory { get; set; }
             public string ApplicantTitle { get; set; }
             public string ApplicantMiddlename { get; set; }
             public string ApplicantForename { get; set; }
@@ -154,10 +154,10 @@ namespace apiPrepTestingFramework.QA.Models
             public string ApplicantSalary { get; set; }
             public string NoDependants { get; set; }
             public object ApplicantNetMonthlyIncome { get; set; }
-            public DateTime ApplicantDateOfBirth { get; set; }
+            public string ApplicantDateOfBirth { get; set; }
             public int LicenceType { get; set; }
             public string LicenceNumber { get; set; }
-            public DateTime DPNProvided { get; set; }
+            public string DPNProvided { get; set; }
         }
 
         public class Addresseshistory
@@ -205,10 +205,10 @@ namespace apiPrepTestingFramework.QA.Models
 
         public class Commission
         {
-            public float Amount { get; set; }
+            public double Amount { get; set; }
             public string Method { get; set; }
             public string Type { get; set; }
-            public float Value { get; set; }
-            public float VolumeBonus { get; set; }
+            public double Value { get; set; }
+            public double VolumeBonus { get; set; }
         }
     }

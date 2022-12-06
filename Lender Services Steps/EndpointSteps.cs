@@ -1,6 +1,7 @@
 ﻿using apiPrepTestingFramework.QA.Extensions;
 using apiPrepTestingFramework.QA.Helpers;
 using Microsoft.Extensions.Configuration;
+using RestSharp;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -44,11 +45,12 @@ namespace apiPrepTestingFramework.QA.Lender_Services_Steps
         }
 
         [Given(@"I have set the endpoint to lenderservicev(.*)api/api/consumersubmission/send")]
-        public void GivenIHaveSetTheEndpointToLenderservicevapiApiConsumersubmissionSend(int p0)
+        public static void GivenIHaveSetTheEndpointToLenderservicevapiApiConsumersubmissionSend(int p0)
         {
-            var lenderServiceV3Api = _config.lenderServicesV3api();
-            var consumerSubmissionSend = "/api/consumersubmission/send";
-            Helper.SetCombinedURL(lenderServiceV3Api, consumerSubmissionSend);
+            var lenderServiceV3Api = ("http://lender-services-v3-api.lender-services-v3-dev.svc.cluster.local/api/consumersubmission/send");
+            Helper.SetURL(lenderServiceV3Api);
+            var request = new RestRequest(lenderServiceV3Api);
+            request.AddHeader("ApiKey", "dGhlaG9seXRyaW5pdHktZGV2");
         }
     }
 }

@@ -3,6 +3,7 @@ using apiPrepTestingFramework.QA.Extensions;
 using apiPrepTestingFramework.QA.Helpers;
 using apiPrepTestingFramework.QA.Models;
 using Microsoft.Extensions.Configuration;
+using RestSharp;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -40,16 +41,27 @@ namespace apiPrepTestingFramework.QA.Lender_Services_Steps
             var restRequest = Helper.CreatePostRequest();
 
         }
-
+        
+        [When(@"I have added a body without a first name with a valid api key")]
         [Given(@"I have added a body without a first name with a valid api key")]
         public void GivenIHaveAddedABodyWithoutAFirstNameWithAValidApiKey()
         {
             var restRequest = Helper.CreatePostRequest();
-            restRequest.AddHeader("ApiKey", _config.lenderServiceV3ValidApiKey());
-            restRequest.AddJsonBody(new Submissions()
+            var bodyTest = new Submissions()
             {
                 AddOnCosts = 0.0,
-                //Affordability    
+                Affordability = new Affordability
+                {
+                    ForeseeFutureDownturnInFinances = false,
+                    GrossAnnualIncome = "30000.00",
+                    DownturnReason = null,
+                    MortageOrRentExpenditure = "1200.00",
+                    OtherCommittedMonthlyOutgoings = "100.00",
+                    ReplacementLoanAmount = null,
+                    ReplacementLoan = false,
+                    ExpectedChangesInCircumstances = false,
+                    NetMonthlyIncome = "2000.00"
+                },
                 AnnualDistanceQuoted = 10000,
                 ApplicantAccountName = "Michael Test",
                 ApplicantAccountNumber = "71070177",
@@ -65,8 +77,65 @@ namespace apiPrepTestingFramework.QA.Lender_Services_Steps
                 ApplicantIsBoardMemberOrDirector = null,
                 ApplicantCountryOfOperation = null,
                 ApplicantMarketingDisclaimerVersionId = null,
-                //Applicants
+                Applicants = new List<Applicant>
+                {
+                        new Applicant
+                        {
+                           ApplicantTitle = "",
+                           ApplicantMiddlename = "",
+                           ApplicantForename = "Tester",
+                           ApplicantGender = "Male",
+                           ApplicantLandline = "",
+                           ApplicantMaritalStatus = "Married",
+                           ApplicantMobile = "07654321012",
+                           Nationality = "GB",
+                           PlaceOfBirth = null,
+                           ApplicantSurname = "Sooner",
+                           ApplicantEmail = "to@dot.com",
+                           ApplicantSalary = "30000.00",
+                           NoDependants = "0",
+                           ApplicantNetMonthlyIncome = null,
+                           ApplicantDateOfBirth = "1970-01-01T00:00:00",
+                           LicenceType = 1,
+                           LicenceNumber = "12345678",
+                           DPNProvided = "2020-12-03T12:06:21.83898Z",
 
+                             AddressesHistory = new List<Addresseshistory>
+                             {
+                                 new Addresseshistory
+                                 {
+                                    BuildingName = "building",
+                                    BuildingNumber = "",
+                                    Country = null,
+                                    County = "Lancashire",
+                                    District = "Hyndburn",
+                                    Postcode = "OL98QD",
+                                    PostTown = "Ay Street",
+                                    Street = "Ay Street",
+                                    SubBuilding = "",
+                                    MonthsAtAddress = 120,
+                                    Residency = "HomeOwner"
+                                 }
+                             },
+                             EmploymentHistory = new List<Employmenthistory>
+                             {
+                                 new Employmenthistory
+                                 {
+                                    GrossAnnualIncome = null,
+                                    NetMonthlyIncome = null,
+                                    MonthsInJob = 120,
+                                    Company = "iVendi",
+                                    OccupationBasis = "EmployedFullTime",
+                                    OccupationType = "MiddleManager",
+                                    TelephoneNumber = "01254654987",
+                                    Occupation = "Tester",
+                                    Terms = 1,
+                                    Status = 1
+                                 }
+                             }
+
+                        }
+                },
                 IARProspectId = null,
                 ArrangedByPhone = false,
                 ArrangedInShowroom = false,
@@ -79,7 +148,7 @@ namespace apiPrepTestingFramework.QA.Lender_Services_Steps
                 FunderCode = "STE",
                 FunderProductCode = "CLOHP1",
                 GlassModelId = null,
-                GlassQualifyModelId = null, 
+                GlassQualifyModelId = null,
                 HighNetWorth = false,
                 NoDependants = "0",
                 Notes = null,
@@ -132,7 +201,18 @@ namespace apiPrepTestingFramework.QA.Lender_Services_Steps
                 SubmittersPhone = null,
                 SourceUrl = null,
                 Commission = 1374.58,
-                //Commissions
+                Commissions = new Commission[]
+                {
+                    new Commission
+                    {
+                        Amount = 1374.58,
+                        Method = "RRPDiscounting",
+                        Type = "PercentageOfAdvance",
+                        Value = 10.0,
+                        VolumeBonus = 0.0
+
+                    }
+                },
                 ValueAddedProduct = null,
                 VehicleMake = "VAUXHALL",
                 VehicleVin = "W0VZRHNS0L6016258",
@@ -143,15 +223,26 @@ namespace apiPrepTestingFramework.QA.Lender_Services_Steps
                 Insurance = 0.0,
                 SubsidyRate = null,
                 SubsidyType = 0,
-                //KnowYourCustomer
-                //PrivacyPolicy
+                KnowYourCustomer = new Knowyourcustomer
+                {
+                    ApplicantCountryOfBirth = "GB",
+                    ApplicantDirectorOrBoardMemberCountryOfOperation = null,
+                    ApplicantDirectorOrBoardMemberPosition = "",
+                    ApplicantDirectorOrBoardMemberCompanySector = null,
+                },
+                PrivacyPolicy = new Privacypolicy
+                {
+                    ApplicantLenderMarketingByEmailConsent = false,
+                    ApplicantLenderMarketingDisclaimerVersionId = null
+                },
                 VatNumber = "",
                 MetaDataCashPrice = 15900.00,
                 MetaDataVehiclePrice = 15900.00,
                 MetadataHasNegativeEquityLoan = false,
                 MetadataHasVapsLoan = false,
-            }); 
+            };
+            var test = System.Text.Json.JsonSerializer.Serialize(bodyTest);
+            restRequest.AddJsonBody(bodyTest);
         }
-
     }
 }

@@ -200,6 +200,9 @@ C:\Users\joshua.hughes_ivendi\Source\Repos\apiPrepTestingFramework\apiPrepTestin
 C:\Users\joshua.hughes_ivendi\Source\Repos\apiPrepTestingFramework\apiPrepTestingFramework.QA\apiPrepTestingFramework.QA\obj\Debug\netcoreapp3.1\apiPrepTestingFramework.QA.dll
 C:\Users\joshua.hughes_ivendi\Source\Repos\apiPrepTestingFramework\apiPrepTestingFramework.QA\apiPrepTestingFramework.QA\obj\Debug\netcoreapp3.1\apiPrepTestingFramework.QA.pdb
 C:\Users\joshua.hughes_ivendi\Source\Repos\apiPrepTestingFramework\apiPrepTestingFramework.QA\apiPrepTestingFramework.QA\obj\Debug\netcoreapp3.1\apiPrepTestingFramework.QA.genruntimeconfig.cache
+C:\Users\joshua.hughes_ivendi\source\repos\LenderServiceAutomationAPITesting\apiPrepTestingFramework.QA\apiPrepTestingFramework.QA\bin\Debug\netcoreapp3.1\testhost.dll
+C:\Users\joshua.hughes_ivendi\source\repos\LenderServiceAutomationAPITesting\apiPrepTestingFramework.QA\apiPrepTestingFramework.QA\bin\Debug\netcoreapp3.1\TechTalk.SpecFlow.NUnit.SpecFlowPlugin.dll
+C:\Users\joshua.hughes_ivendi\source\repos\LenderServiceAutomationAPITesting\apiPrepTestingFramework.QA\apiPrepTestingFramework.QA\bin\Debug\netcoreapp3.1\SpecFlow.Autofac.SpecFlowPlugin.dll
 C:\Users\joshua.hughes_ivendi\source\repos\LenderServiceAutomationAPITesting\apiPrepTestingFramework.QA\apiPrepTestingFramework.QA\bin\Debug\netcoreapp3.1\Microsoft.Azure.Documents.ServiceInterop.dll
 C:\Users\joshua.hughes_ivendi\source\repos\LenderServiceAutomationAPITesting\apiPrepTestingFramework.QA\apiPrepTestingFramework.QA\bin\Debug\netcoreapp3.1\Cosmos.CRTCompat.dll
 C:\Users\joshua.hughes_ivendi\source\repos\LenderServiceAutomationAPITesting\apiPrepTestingFramework.QA\apiPrepTestingFramework.QA\bin\Debug\netcoreapp3.1\Microsoft.Azure.Cosmos.ServiceInterop.dll
@@ -207,9 +210,6 @@ C:\Users\joshua.hughes_ivendi\source\repos\LenderServiceAutomationAPITesting\api
 C:\Users\joshua.hughes_ivendi\source\repos\LenderServiceAutomationAPITesting\apiPrepTestingFramework.QA\apiPrepTestingFramework.QA\bin\Debug\netcoreapp3.1\vcruntime140.dll
 C:\Users\joshua.hughes_ivendi\source\repos\LenderServiceAutomationAPITesting\apiPrepTestingFramework.QA\apiPrepTestingFramework.QA\bin\Debug\netcoreapp3.1\vcruntime140_1.dll
 C:\Users\joshua.hughes_ivendi\source\repos\LenderServiceAutomationAPITesting\apiPrepTestingFramework.QA\apiPrepTestingFramework.QA\bin\Debug\netcoreapp3.1\testhost.exe
-C:\Users\joshua.hughes_ivendi\source\repos\LenderServiceAutomationAPITesting\apiPrepTestingFramework.QA\apiPrepTestingFramework.QA\bin\Debug\netcoreapp3.1\testhost.dll
-C:\Users\joshua.hughes_ivendi\source\repos\LenderServiceAutomationAPITesting\apiPrepTestingFramework.QA\apiPrepTestingFramework.QA\bin\Debug\netcoreapp3.1\TechTalk.SpecFlow.NUnit.SpecFlowPlugin.dll
-C:\Users\joshua.hughes_ivendi\source\repos\LenderServiceAutomationAPITesting\apiPrepTestingFramework.QA\apiPrepTestingFramework.QA\bin\Debug\netcoreapp3.1\SpecFlow.Autofac.SpecFlowPlugin.dll
 C:\Users\joshua.hughes_ivendi\source\repos\LenderServiceAutomationAPITesting\apiPrepTestingFramework.QA\apiPrepTestingFramework.QA\bin\Debug\netcoreapp3.1\NUnit3.TestAdapter.dll
 C:\Users\joshua.hughes_ivendi\source\repos\LenderServiceAutomationAPITesting\apiPrepTestingFramework.QA\apiPrepTestingFramework.QA\bin\Debug\netcoreapp3.1\NUnit3.TestAdapter.pdb
 C:\Users\joshua.hughes_ivendi\source\repos\LenderServiceAutomationAPITesting\apiPrepTestingFramework.QA\apiPrepTestingFramework.QA\bin\Debug\netcoreapp3.1\nunit.engine.dll
