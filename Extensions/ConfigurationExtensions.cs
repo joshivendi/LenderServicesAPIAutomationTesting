@@ -18,5 +18,15 @@ namespace apiPrepTestingFramework.QA.Extensions
         {
             return config.GetValue<string>("DealershipId");
         }
+
+        public static string lenderServicesV3api(this IConfiguration config)
+        {
+            return config.GetValue<string>("lenderServicesV3api");
+        }
+
+        public static string lenderServiceV3ValidApiKey(this IConfiguration config)
+        {
+            return config.GetValue<string>("lenderServiceV3ValidApiKey");
+        }
     }
 }

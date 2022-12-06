@@ -6,8 +6,8 @@ I expect to get a failed result
 
 #Vehicles
 Scenario: error message displayed, vechile milage over 60000
-	Given I have set the endpoint to <template>
-	And I have added a body with a invalid milage over 6000
+	Given I have set the endpoint to lenderservicev3api/api/consumersubmission/send
+	And I have added a body with a invalid milage over 6000 with a valid api key
 	Then I should receive a Bad request response code
 	And I am displayed the correct error message for incorrect vechile input
 
@@ -20,9 +20,9 @@ Scenario: valid submission, vechile milage between 0 and 60000
 
 #Applicant
 Scenario: error message displayed, first name field null
-	Given I have set the endpoint to <template>
-	And I have added a body without a first name
-	When I create a POST request
+	Given I have set the endpoint to lenderservicev3api/api/consumersubmission/send
+	And I have added a body without a first name with a valid api key
+	#When I create a POST request
 	When I get a response back
 	Then I should receive a Bad request response code
 	And I am displayed the correct error message for null first name field

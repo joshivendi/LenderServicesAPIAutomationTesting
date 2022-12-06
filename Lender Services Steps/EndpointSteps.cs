@@ -43,5 +43,12 @@ namespace apiPrepTestingFramework.QA.Lender_Services_Steps
             Helper.SetURL(stellantisURL);
         }
 
+        [Given(@"I have set the endpoint to lenderservicev(.*)api/api/consumersubmission/send")]
+        public void GivenIHaveSetTheEndpointToLenderservicevapiApiConsumersubmissionSend(int p0)
+        {
+            var lenderServiceV3Api = _config.lenderServicesV3api();
+            var consumerSubmissionSend = "/api/consumersubmission/send";
+            Helper.SetCombinedURL(lenderServiceV3Api, consumerSubmissionSend);
+        }
     }
 }
