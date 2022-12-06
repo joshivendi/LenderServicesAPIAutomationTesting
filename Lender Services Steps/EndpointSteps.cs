@@ -45,12 +45,10 @@ namespace apiPrepTestingFramework.QA.Lender_Services_Steps
         }
 
         [Given(@"I have set the endpoint to lenderservicev(.*)api/api/consumersubmission/send")]
-        public static void GivenIHaveSetTheEndpointToLenderservicevapiApiConsumersubmissionSend(int p0)
+        public void GivenIHaveSetTheEndpointToLenderservicevapiApiConsumersubmissionSend(int p0)
         {
-            var lenderServiceV3Api = ("http://lender-services-v3-api.lender-services-v3-dev.svc.cluster.local/api/consumersubmission/send");
+            var lenderServiceV3Api = _config.lenderServicesV3api();
             Helper.SetURL(lenderServiceV3Api);
-            var request = new RestRequest(lenderServiceV3Api);
-            request.AddHeader("ApiKey", "dGhlaG9seXRyaW5pdHktZGV2");
         }
     }
 }
