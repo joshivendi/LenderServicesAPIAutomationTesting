@@ -57,17 +57,5 @@ namespace apiPrepTestingFramework.QA.Lender_Services_Steps
             Assert.AreEqual("'Applicant Forename' must not be empty.", firstNameNullField.errors.ApplicantForename.First());
             
         }
-
-
-        //[Then(@"I should be displayed Users in the response")]
-        //public void ThenIShouldBeDisplayedUsersInTheResponse()
-        //{
-        //    var response = Helper.GetResponse();
-        //    var getUserDetails = Helper.GetContent<ListOfUsers>(response);
-        //    Assert.AreEqual(2, getUserDetails.Page);
-        //    Assert.AreEqual("Michael", getUserDetails.Data[0].first_name);
-        //    Assert.AreEqual("Lawson", getUserDetails.Data[0].last_name);
-        //    Console.WriteLine("User data is returning");
-        //}
     }
 }
