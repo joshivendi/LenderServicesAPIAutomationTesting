@@ -1,9 +1,11 @@
 ﻿using apiPrepTestingFramework.QA.Helpers;
+using apiPrepTestingFramework.QA.Models;
 using Microsoft.Extensions.Configuration;
 using NUnit.Framework;
 using RestSharp;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using System.Text;
 using TechTalk.SpecFlow;
@@ -45,6 +47,15 @@ namespace apiPrepTestingFramework.QA.Lender_Services_Steps
             Console.WriteLine(response.Content);
             _context.Get<IRestResponse>("apiResponse");
             Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.BadRequest));
+        }
+
+        [Then(@"I am displayed the correct error message for null first name field")]
+        public void ThenIAmDisplayedTheCorrectErrorMessageForNullFirstNameField()
+        {
+            var response = Helper.GetResponse();
+            var firstNameNullField = Helper.GetContent<SubmissionsErrorResponse>(response);
+            Assert.AreEqual("'Applicant Forename' must not be empty.", firstNameNullField.errors.ApplicantForename.First());
+            
         }
 
 

@@ -23,10 +23,8 @@ Scenario: error message displayed, first name field null
 	Given I have set the endpoint to lenderservicev3api/api/consumersubmission/send
 	When I have set the api key in the header
 	And I have added a body without a first name with a valid api key
-	#When I create a POST request
-	#When I get a response back
 	Then I should receive a Bad request response code
-	#And I am displayed the correct error message for null first name field
+	And I am displayed the correct error message for null first name field
 
 Scenario: error message displayed, first name character limit reached
 	Given I have set the endpoint to <template>

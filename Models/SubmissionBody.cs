@@ -6,7 +6,7 @@ namespace apiPrepTestingFramework.QA.Models
 {
     public class Submissions
     {
-            public double AddOnCosts { get; set; }
+            public decimal AddOnCosts { get; set; }
             public Affordability Affordability { get; set; }
             public int AnnualDistanceQuoted { get; set; }
             public string ApplicantAccountName { get; set; }
@@ -29,10 +29,10 @@ namespace apiPrepTestingFramework.QA.Models
             public bool ArrangedInShowroom { get; set; }
             public bool ArrangedOnline { get; set; }
             public bool BusinessUse { get; set; }
-            public double ChargePerOverDistanceUnit { get; set; }
+            public decimal ChargePerOverDistanceUnit { get; set; }
             public string DealershipId { get; set; }
             public bool DistanceMarketed { get; set; }
-            public double FinanceDepositAllowance { get; set; }
+            public decimal FinanceDepositAllowance { get; set; }
             public string FunderCode { get; set; }
             public string FunderProductCode { get; set; }
             public object GlassModelId { get; set; }
@@ -41,36 +41,36 @@ namespace apiPrepTestingFramework.QA.Models
             public string NoDependants { get; set; }
             public object Notes { get; set; }
             public object NotesAuthor { get; set; }
-            public double OutstandingSettlement { get; set; }
-            public double QuoteAPR { get; set; }
-            public double QuoteAcceptanceFeeFirst { get; set; }
+            public decimal OutstandingSettlement { get; set; }
+            public decimal QuoteAPR { get; set; }
+            public decimal QuoteAcceptanceFeeFirst { get; set; }
             public object QuoteAcceptanceFeeLast { get; set; }
             public bool QuoteAcceptanceFeeSpread { get; set; }
-            public double QuoteAdvance { get; set; }
-            public double QuoteBalloon { get; set; }
-            public double QuoteBaseRate { get; set; }
-            public double QuoteCashPrice { get; set; }
-            public double QuoteActualCashDeposit { get; set; }
-            public double QuoteVehiclePrice { get; set; }
+            public decimal QuoteAdvance { get; set; }
+            public decimal QuoteBalloon { get; set; }
+            public decimal QuoteBaseRate { get; set; }
+            public decimal QuoteCashPrice { get; set; }
+            public decimal QuoteActualCashDeposit { get; set; }
+            public decimal QuoteVehiclePrice { get; set; }
             public string QuoteCondition { get; set; }
             public bool IsUsedVehicle { get; set; }
-            public double QuoteCustomerRate { get; set; }
+            public decimal QuoteCustomerRate { get; set; }
             public string RateType { get; set; }
-            public double FlatRate { get; set; }
-            public double QuoteDeposit { get; set; }
-            public double QuoteFinalPaymentAmount { get; set; }
+            public decimal FlatRate { get; set; }
+            public decimal QuoteDeposit { get; set; }
+            public decimal QuoteFinalPaymentAmount { get; set; }
             public string QuoteFinanceType { get; set; }
-            public double QuoteFirstPaymentAmount { get; set; }
+            public decimal QuoteFirstPaymentAmount { get; set; }
             public int QuoteFollowedBy { get; set; }
             public string QuoteId { get; set; }
-            public double QuoteInterestCharges { get; set; }
-            public double TotalAmountPayable { get; set; }
+            public decimal QuoteInterestCharges { get; set; }
+            public decimal TotalAmountPayable { get; set; }
             public int QuoteInitialPauseMonths { get; set; }
-            public double QuoteInterestRate { get; set; }
-            public double QuotePartExchange { get; set; }
-            public double QuotePurchaseFee { get; set; }
+            public decimal QuoteInterestRate { get; set; }
+            public decimal QuotePartExchange { get; set; }
+            public decimal QuotePurchaseFee { get; set; }
             public bool QuotePurchaseFeeSpread { get; set; }
-            public double QuoteRegularPaymentAmount { get; set; }
+            public decimal QuoteRegularPaymentAmount { get; set; }
             public int QuoteTerm { get; set; }
             public int QuoteTermQuoted { get; set; }
             public bool QuoteVATIncluded { get; set; }
@@ -88,23 +88,23 @@ namespace apiPrepTestingFramework.QA.Models
             public object SubmittersName { get; set; }
             public object SubmittersPhone { get; set; }
             public object SourceUrl { get; set; }
-            public double Commission { get; set; }
+            public decimal Commission { get; set; }
             public Commission[] Commissions { get; set; }
             public object[] ValueAddedProduct { get; set; }
             public string VehicleMake { get; set; }
             public string VehicleVin { get; set; }
             public string ClientAppName { get; set; }
             public string ClientAppVersion { get; set; }
-            public double Warranty { get; set; }
-            public double OtherAccessories { get; set; }
-            public double Insurance { get; set; }
+            public decimal Warranty { get; set; }
+            public decimal OtherAccessories { get; set; }
+            public decimal Insurance { get; set; }
             public object SubsidyRate { get; set; }
             public int SubsidyType { get; set; }
             public Knowyourcustomer KnowYourCustomer { get; set; }
             public Privacypolicy PrivacyPolicy { get; set; }
             public string VatNumber { get; set; }
-            public double MetaDataCashPrice { get; set; }
-            public double MetaDataVehiclePrice { get; set; }
+            public decimal MetaDataCashPrice { get; set; }
+            public decimal MetaDataVehiclePrice { get; set; }
             public bool MetadataHasNegativeEquityLoan { get; set; }
             public bool MetadataHasVapsLoan { get; set; }
         }
@@ -205,10 +205,10 @@ namespace apiPrepTestingFramework.QA.Models
 
         public class Commission
         {
-            public double Amount { get; set; }
+            public decimal Amount { get; set; }
             public string Method { get; set; }
             public string Type { get; set; }
-            public double Value { get; set; }
-            public double VolumeBonus { get; set; }
+            public decimal Value { get; set; }
+            public decimal VolumeBonus { get; set; }
         }
     }
