@@ -42,10 +42,9 @@ namespace apiPrepTestingFramework.QA.Lender_Services_Steps
             var restRequest = Helper.CreatePostRequest();
 
         }
-        
-        [When(@"I have added a body without a first name with a valid api key")]
-        [Given(@"I have added a body without a first name with a valid api key")]
-        public void GivenIHaveAddedABodyWithoutAFirstNameWithAValidApiKey()
+
+        [When(@"I have added a body without a first name")]
+        public void WhenIHaveAddedABodyWithoutAFirstName()
         {
             var restRequest = _context.Get<RestRequest>("request");
             var bodyTest = Helper.ValidSubmission;
@@ -53,5 +52,45 @@ namespace apiPrepTestingFramework.QA.Lender_Services_Steps
             var test = System.Text.Json.JsonSerializer.Serialize(bodyTest);
             restRequest.AddJsonBody(bodyTest);
         }
+
+        [When(@"I have added a body with a invalid milage over (.*)")]
+        public void WhenIHaveAddedABodyWithAInvalidMilageOver(int p0)
+        {
+            var restRequest = _context.Get<RestRequest>("request");
+            var bodyTest = Helper.ValidSubmission;
+            bodyTest.Applicants.First().ApplicantForename = null;
+            var test = System.Text.Json.JsonSerializer.Serialize(bodyTest);
+            restRequest.AddJsonBody(bodyTest);
+        }
+
+        [When(@"I have added a body with a first name over the (.*) character limit")]
+        public void WhenIHaveAddedABodyWithAFirstNameOverTheCharacterLimit(int p0)
+        {
+            var restRequest = _context.Get<RestRequest>("request");
+            var bodyTest = Helper.ValidSubmission;
+            bodyTest.Applicants.First().ApplicantForename = _config.FirstNameCharacterLimitReached();
+            var test = System.Text.Json.JsonSerializer.Serialize(bodyTest);
+            restRequest.AddJsonBody(bodyTest);
+        }
+
+        [When(@"I have added a body without a surname")]
+        public void WhenIHaveAddedABodyWithoutASurname()
+        {
+            var restRequest = _context.Get<RestRequest>("request");
+            var bodyTest = Helper.ValidSubmission;
+            bodyTest.Applicants.First().ApplicantSurname = null;
+            var test = System.Text.Json.JsonSerializer.Serialize(bodyTest);
+            restRequest.AddJsonBody(bodyTest);
+        }
+
+        [When(@"I have added a body with a valid submission")]
+        public void WhenIHaveAddedABodyWithAValidSubmission()
+        {
+            var restRequest = _context.Get<RestRequest>("request");
+            var bodyTest = Helper.ValidSubmission;
+            var test = System.Text.Json.JsonSerializer.Serialize(bodyTest);
+            restRequest.AddJsonBody(bodyTest);
+        }
+
     }
 }

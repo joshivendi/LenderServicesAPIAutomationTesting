@@ -5,34 +5,35 @@ When I submit a Request for Stellantis that is invalid
 I expect to get a failed result
 
 #Vehicles
+Scenario: valid submission
+	Given I have set the endpoint to lenderservicev3api/api/consumersubmission/send
+	When I have set the api key in the header
+	And I have added a body with a valid submission
+	Then I should receive a Bad request response code
+
+
+#Vehicles
 Scenario: error message displayed, vechile milage over 60000
 	Given I have set the endpoint to lenderservicev3api/api/consumersubmission/send
-	And I have added a body with a invalid milage over 6000 with a valid api key
+	When I have set the api key in the header
+	And I have added a body with a invalid milage over 6000
 	Then I should receive a Bad request response code
 	And I am displayed the correct error message for incorrect vechile input
-
-Scenario: valid submission, vechile milage between 0 and 60000
-	Given I have set the endpoint to <template>
-	And I have added a body with milage between 0 and 60000
-	When I create a POST request
-	When I get a response back
-	Then I should receive a OK response code
 
 #Applicant
 Scenario: error message displayed, first name field null
 	Given I have set the endpoint to lenderservicev3api/api/consumersubmission/send
 	When I have set the api key in the header
-	And I have added a body without a first name with a valid api key
+	And I have added a body without a first name
 	Then I should receive a Bad request response code
 	And I am displayed the correct error message for null first name field
 
 Scenario: error message displayed, first name character limit reached
-	Given I have set the endpoint to <template>
+	Given I have set the endpoint to lenderservicev3api/api/consumersubmission/send
+	When I have set the api key in the header
 	And I have added a body with a first name over the 30 character limit
-	When I create a POST request
-	When I get a response back
 	Then I should receive a Bad request response code
-	#And I am displayed the correct error message for first name character limit being reached
+	And I am displayed the correct error message for first name character limit being reached
 
 Scenario: error message displayed, incorrect value entered for first name, number
 	Given I have set the endpoint to <template>
@@ -50,18 +51,10 @@ Scenario: error message displayed, incorrect value entered for first name, speci
 	Then I should receive a Bad request response code
 	And I am displayed the correct error message for first name incorrect values for special character
 
-Scenario: valid submission, correct first name values entered
-	Given I have set the endpoint to <template>
-	And I have added a body with a valid first name
-	When I create a POST request
-	When I get a response back
-	Then I should receive a OK response code
-
 Scenario: error message displayed, surname field null
-	Given I have set the endpoint to <template>
+	Given I have set the endpoint to lenderservicev3api/api/consumersubmission/send
+	When I have set the api key in the header
 	And I have added a body without a surname
-	When I create a POST request
-	When I get a response back
 	Then I should receive a Bad request response code
 	And I am displayed the correct error message for null surname field
 

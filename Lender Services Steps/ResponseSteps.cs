@@ -55,7 +55,22 @@ namespace apiPrepTestingFramework.QA.Lender_Services_Steps
             var response = Helper.GetResponse();
             var firstNameNullField = Helper.GetContent<SubmissionsErrorResponse>(response);
             Assert.AreEqual("'Applicant Forename' must not be empty.", firstNameNullField.errors.ApplicantForename.First());
-            
+        }
+
+        [Then(@"I am displayed the correct error message for first name character limit being reached")]
+        public void ThenIAmDisplayedTheCorrectErrorMessageForFirstNameCharacterLimitBeingReached()
+        {
+            var response = Helper.GetResponse();
+            var firstNameNullField = Helper.GetContent<SubmissionsErrorResponse>(response);
+            Assert.AreEqual("The length of 'Applicant Forename' must be 25 characters or fewer. You entered 63 characters.", firstNameNullField.errors.ApplicantForename.First());
+        }
+
+        [Then(@"I am displayed the correct error message for null surname field")]
+        public void ThenIAmDisplayedTheCorrectErrorMessageForNullSurnameField()
+        {
+            var response = Helper.GetResponse();
+            var firstNameNullField = Helper.GetContent<SubmissionsErrorResponse>(response);
+            Assert.AreEqual("'Applicant Surname' must not be empty.", firstNameNullField.errors.ApplicantSurname.First());
         }
     }
 }

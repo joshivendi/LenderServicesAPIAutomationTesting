@@ -16,5 +16,7 @@ namespace apiPrepTestingFramework.QA.Models
     public class Errors
     {
         public List<string> ApplicantForename { get; set; }
+        public List<string> ApplicantSurname { get; set; }
+        public string[] EmploymentHistory0EmploymentTelephoneNumber { get; set; }
     }
 }

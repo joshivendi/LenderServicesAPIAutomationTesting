@@ -28,5 +28,10 @@ namespace apiPrepTestingFramework.QA.Extensions
         {
             return config.GetValue<string>("lenderServiceV3ValidApiKey");
         }
+
+        public static string FirstNameCharacterLimitReached(this IConfiguration config)
+        {
+            return config.GetValue<string>("FirstNameCharacterLimitReached");
+        }
     }
 }

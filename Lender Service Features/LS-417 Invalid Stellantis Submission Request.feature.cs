@@ -75,12 +75,12 @@ namespace apiPrepTestingFramework.QA.LenderServiceFeatures
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("error message displayed, vechile milage over 60000")]
-        public void ErrorMessageDisplayedVechileMilageOver60000()
+        [NUnit.Framework.DescriptionAttribute("valid submission")]
+        public void ValidSubmission()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("error message displayed, vechile milage over 60000", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("valid submission", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 8
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -95,26 +95,26 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("I have set the endpoint to lenderservicev3api/api/consumersubmission/send", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 10
- testRunner.And("I have added a body with a invalid milage over 6000 with a valid api key", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When("I have set the api key in the header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 11
- testRunner.Then("I should receive a Bad request response code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.And("I have added a body with a valid submission", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 12
- testRunner.And("I am displayed the correct error message for incorrect vechile input", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Then("I should receive a Bad request response code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("valid submission, vechile milage between 0 and 60000")]
-        public void ValidSubmissionVechileMilageBetween0And60000()
+        [NUnit.Framework.DescriptionAttribute("error message displayed, vechile milage over 60000")]
+        public void ErrorMessageDisplayedVechileMilageOver60000()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("valid submission, vechile milage between 0 and 60000", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 14
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("error message displayed, vechile milage over 60000", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 16
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -124,20 +124,20 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 15
- testRunner.Given("I have set the endpoint to <template>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 16
- testRunner.And("I have added a body with milage between 0 and 60000", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
 #line 17
- testRunner.When("I create a POST request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Given("I have set the endpoint to lenderservicev3api/api/consumersubmission/send", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 18
- testRunner.When("I get a response back", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I have set the api key in the header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 19
- testRunner.Then("I should receive a OK response code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.And("I have added a body with a invalid milage over 6000", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 20
+ testRunner.Then("I should receive a Bad request response code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 21
+ testRunner.And("I am displayed the correct error message for incorrect vechile input", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -150,7 +150,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("error message displayed, first name field null", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 22
+#line 24
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -160,19 +160,19 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 23
+#line 25
  testRunner.Given("I have set the endpoint to lenderservicev3api/api/consumersubmission/send", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 24
+#line 26
  testRunner.When("I have set the api key in the header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 25
- testRunner.And("I have added a body without a first name with a valid api key", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 27
+ testRunner.And("I have added a body without a first name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 26
+#line 28
  testRunner.Then("I should receive a Bad request response code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 27
+#line 29
  testRunner.And("I am displayed the correct error message for null first name field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -186,7 +186,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("error message displayed, first name character limit reached", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 29
+#line 31
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -196,20 +196,21 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 30
- testRunner.Given("I have set the endpoint to <template>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 31
- testRunner.And("I have added a body with a first name over the 30 character limit", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
 #line 32
- testRunner.When("I create a POST request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Given("I have set the endpoint to lenderservicev3api/api/consumersubmission/send", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 33
- testRunner.When("I get a response back", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I have set the api key in the header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 34
+ testRunner.And("I have added a body with a first name over the 30 character limit", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 35
  testRunner.Then("I should receive a Bad request response code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 36
+ testRunner.And("I am displayed the correct error message for first name character limit being rea" +
+                        "ched", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -222,7 +223,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("error message displayed, incorrect value entered for first name, number", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 37
+#line 38
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -232,22 +233,22 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 38
+#line 39
  testRunner.Given("I have set the endpoint to <template>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 39
+#line 40
  testRunner.And("I have added a body with a first name with a number", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 40
+#line 41
  testRunner.When("I create a POST request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 41
+#line 42
  testRunner.When("I get a response back", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 42
+#line 43
  testRunner.Then("I should receive a Bad request response code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 43
+#line 44
  testRunner.And("I am displayed the correct error message for first name incorrect values for numb" +
                         "er", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -264,7 +265,7 @@ this.ScenarioInitialize(scenarioInfo);
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("error message displayed, incorrect value entered for first name, special characte" +
                     "r", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 45
+#line 46
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -274,60 +275,24 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 46
- testRunner.Given("I have set the endpoint to <template>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
 #line 47
- testRunner.And("I have added a body with a first name with a special character", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Given("I have set the endpoint to <template>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 48
- testRunner.When("I create a POST request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("I have added a body with a first name with a special character", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 49
- testRunner.When("I get a response back", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 50
- testRunner.Then("I should receive a Bad request response code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-#line 51
- testRunner.And("I am displayed the correct error message for first name incorrect values for spec" +
-                        "ial character", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("valid submission, correct first name values entered")]
-        public void ValidSubmissionCorrectFirstNameValuesEntered()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("valid submission, correct first name values entered", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 53
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 54
- testRunner.Given("I have set the endpoint to <template>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 55
- testRunner.And("I have added a body with a valid first name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 56
  testRunner.When("I create a POST request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 57
+#line 50
  testRunner.When("I get a response back", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 58
- testRunner.Then("I should receive a OK response code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 51
+ testRunner.Then("I should receive a Bad request response code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 52
+ testRunner.And("I am displayed the correct error message for first name incorrect values for spec" +
+                        "ial character", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -340,7 +305,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("error message displayed, surname field null", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 60
+#line 54
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -350,22 +315,19 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 61
- testRunner.Given("I have set the endpoint to <template>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 55
+ testRunner.Given("I have set the endpoint to lenderservicev3api/api/consumersubmission/send", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 62
+#line 56
+ testRunner.When("I have set the api key in the header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 57
  testRunner.And("I have added a body without a surname", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 63
- testRunner.When("I create a POST request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 64
- testRunner.When("I get a response back", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 65
+#line 58
  testRunner.Then("I should receive a Bad request response code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 66
+#line 59
  testRunner.And("I am displayed the correct error message for null surname field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -379,7 +341,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("error message displayed, surname character limit reached", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 68
+#line 61
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -389,22 +351,22 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 69
+#line 62
  testRunner.Given("I have set the endpoint to <template>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 70
+#line 63
  testRunner.And("I have added a body with a surname over the 30 character limit", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 71
+#line 64
  testRunner.When("I create a POST request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 72
+#line 65
  testRunner.When("I get a response back", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 73
+#line 66
  testRunner.Then("I should receive a Bad request response code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 74
+#line 67
  testRunner.And("I am displayed the correct error message for surname character limit being reache" +
                         "d", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -419,7 +381,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("error message displayed, incorrect value entered for surname, number", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 76
+#line 69
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -429,22 +391,22 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 77
+#line 70
  testRunner.Given("I have set the endpoint to <template>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 78
+#line 71
  testRunner.And("I have added a body with a surname with a number", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 79
+#line 72
  testRunner.When("I create a POST request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 80
+#line 73
  testRunner.When("I get a response back", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 81
+#line 74
  testRunner.Then("I should receive a Bad request response code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 82
+#line 75
  testRunner.And("I am displayed the correct error message for surname incorrect values for number", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -458,7 +420,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("error message displayed, incorrect value entered for surname, special character", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 84
+#line 77
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -468,22 +430,22 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 85
+#line 78
  testRunner.Given("I have set the endpoint to <template>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 86
+#line 79
  testRunner.And("I have added a body with a surname with a special character", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 87
+#line 80
  testRunner.When("I create a POST request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 88
+#line 81
  testRunner.When("I get a response back", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 89
+#line 82
  testRunner.Then("I should receive a Bad request response code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 90
+#line 83
  testRunner.And("I am displayed the correct error message for surname incorrect values for special" +
                         " character", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -498,6 +460,42 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("valid submission, correct surname values entered", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 85
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 86
+ testRunner.Given("I have set the endpoint to <template>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 87
+ testRunner.And("I have added a body with a valid surname", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 88
+ testRunner.When("I create a POST request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 89
+ testRunner.When("I get a response back", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 90
+ testRunner.Then("I should receive a OK response code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("error message, incorrect date formatting for DOB")]
+        public void ErrorMessageIncorrectDateFormattingForDOB()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("error message, incorrect date formatting for DOB", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 92
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -512,7 +510,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("I have set the endpoint to <template>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 94
- testRunner.And("I have added a body with a valid surname", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I have added a body with a DOB incorrectly formatted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 95
  testRunner.When("I create a POST request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -521,45 +519,9 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("I get a response back", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 97
- testRunner.Then("I should receive a OK response code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("error message, incorrect date formatting for DOB")]
-        public void ErrorMessageIncorrectDateFormattingForDOB()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("error message, incorrect date formatting for DOB", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 99
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 100
- testRunner.Given("I have set the endpoint to <template>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 101
- testRunner.And("I have added a body with a DOB incorrectly formatted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 102
- testRunner.When("I create a POST request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 103
- testRunner.When("I get a response back", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 104
  testRunner.Then("I should receive a Bad request response code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 105
+#line 98
  testRunner.And("I am displayed the correct error message for DOB incorrectly formatted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -573,7 +535,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("valid submission, correct DOB values entered", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 107
+#line 100
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -583,19 +545,19 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 108
+#line 101
  testRunner.Given("I have set the endpoint to <template>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 109
+#line 102
  testRunner.And("I have added a body with a valid DOB, formatted correctly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 110
+#line 103
  testRunner.When("I create a POST request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 111
+#line 104
  testRunner.When("I get a response back", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 112
+#line 105
  testRunner.Then("I should receive a OK response code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -609,7 +571,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("error message, incorrect date formatting for date at address", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 115
+#line 108
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -619,22 +581,22 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 116
+#line 109
  testRunner.Given("I have set the endpoint to <template>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 117
+#line 110
  testRunner.And("I have added a body with a date at address incorrectly formatted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 118
+#line 111
  testRunner.When("I create a POST request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 119
+#line 112
  testRunner.When("I get a response back", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 120
+#line 113
  testRunner.Then("I should receive a Bad request response code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 121
+#line 114
  testRunner.And("I am displayed the correct error message for date at address incorrectly formatte" +
                         "d", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -651,7 +613,7 @@ this.ScenarioInitialize(scenarioInfo);
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("error message, valid date is less than three years, previous address is mandatory" +
                     "", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 123
+#line 116
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -661,22 +623,22 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 124
+#line 117
  testRunner.Given("I have set the endpoint to <template>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 125
+#line 118
  testRunner.And("I have added a body with a valid date at address, less than three years", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 126
+#line 119
  testRunner.When("I create a POST request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 127
+#line 120
  testRunner.When("I get a response back", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 128
+#line 121
  testRunner.Then("I should receive a Bad request response code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 129
+#line 122
  testRunner.And("I am displayed a error message saying previous address must be entered", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -690,6 +652,42 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("valid submission, date entered minimum of three years at the property", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 124
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 125
+ testRunner.Given("I have set the endpoint to <template>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 126
+ testRunner.And("I have added a body with a date within a minimum of 3 years", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 127
+ testRunner.When("I create a POST request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 128
+ testRunner.When("I get a response back", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 129
+ testRunner.Then("I should receive a OK response code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("error message displayed, locality name character limit reached")]
+        public void ErrorMessageDisplayedLocalityNameCharacterLimitReached()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("error message displayed, locality name character limit reached", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 131
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -704,7 +702,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("I have set the endpoint to <template>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 133
- testRunner.And("I have added a body with a date within a minimum of 3 years", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I have added a body with a locality name over the 20 character limit", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 134
  testRunner.When("I create a POST request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -713,45 +711,9 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("I get a response back", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 136
- testRunner.Then("I should receive a OK response code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("error message displayed, locality name character limit reached")]
-        public void ErrorMessageDisplayedLocalityNameCharacterLimitReached()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("error message displayed, locality name character limit reached", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 138
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 139
- testRunner.Given("I have set the endpoint to <template>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 140
- testRunner.And("I have added a body with a locality name over the 20 character limit", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 141
- testRunner.When("I create a POST request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 142
- testRunner.When("I get a response back", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 143
  testRunner.Then("I should receive a Bad request response code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 144
+#line 137
  testRunner.And("I am displayed the correct error message for locality name character limit being " +
                         "reached", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -766,6 +728,42 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("valid submission, correct locality name values entered", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 139
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 140
+ testRunner.Given("I have set the endpoint to <template>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 141
+ testRunner.And("I have added a body with a locality name within the character character limits", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 142
+ testRunner.When("I create a POST request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 143
+ testRunner.When("I get a response back", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 144
+ testRunner.Then("I should receive a OK response code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("valid submission, locality name field is null")]
+        public void ValidSubmissionLocalityNameFieldIsNull()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("valid submission, locality name field is null", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 146
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -780,7 +778,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("I have set the endpoint to <template>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 148
- testRunner.And("I have added a body with a locality name within the character character limits", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I have added a body with a locality name field null", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 149
  testRunner.When("I create a POST request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -796,12 +794,12 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("valid submission, locality name field is null")]
-        public void ValidSubmissionLocalityNameFieldIsNull()
+        [NUnit.Framework.DescriptionAttribute("error message displayed, postTown field character limit reached")]
+        public void ErrorMessageDisplayedPostTownFieldCharacterLimitReached()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("valid submission, locality name field is null", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("error message displayed, postTown field character limit reached", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 153
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -816,7 +814,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("I have set the endpoint to <template>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 155
- testRunner.And("I have added a body with a locality name field null", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I have added a body with postTown over the 30 character limit", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 156
  testRunner.When("I create a POST request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -825,45 +823,9 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("I get a response back", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 158
- testRunner.Then("I should receive a OK response code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("error message displayed, postTown field character limit reached")]
-        public void ErrorMessageDisplayedPostTownFieldCharacterLimitReached()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("error message displayed, postTown field character limit reached", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 160
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 161
- testRunner.Given("I have set the endpoint to <template>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 162
- testRunner.And("I have added a body with postTown over the 30 character limit", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 163
- testRunner.When("I create a POST request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 164
- testRunner.When("I get a response back", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 165
  testRunner.Then("I should receive a Bad request response code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 166
+#line 159
  testRunner.And("I am displayed the correct error message for postTown character limit being reach" +
                         "ed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -878,6 +840,42 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("valid submission, correct postTown values entered", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 161
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 162
+ testRunner.Given("I have set the endpoint to <template>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 163
+ testRunner.And("I have added a body with postTown within the character character limits", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 164
+ testRunner.When("I create a POST request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 165
+ testRunner.When("I get a response back", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 166
+ testRunner.Then("I should receive a OK response code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("valid submission, postTown field is null")]
+        public void ValidSubmissionPostTownFieldIsNull()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("valid submission, postTown field is null", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 168
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -892,7 +890,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("I have set the endpoint to <template>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 170
- testRunner.And("I have added a body with postTown within the character character limits", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I have added a body with postTown field null", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 171
  testRunner.When("I create a POST request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -908,12 +906,12 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("valid submission, postTown field is null")]
-        public void ValidSubmissionPostTownFieldIsNull()
+        [NUnit.Framework.DescriptionAttribute("error message, postcode field left null")]
+        public void ErrorMessagePostcodeFieldLeftNull()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("valid submission, postTown field is null", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("error message, postcode field left null", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 175
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -928,7 +926,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("I have set the endpoint to <template>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 177
- testRunner.And("I have added a body with postTown field null", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I have added a body without a postcode", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 178
  testRunner.When("I create a POST request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -937,45 +935,9 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("I get a response back", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 180
- testRunner.Then("I should receive a OK response code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("error message, postcode field left null")]
-        public void ErrorMessagePostcodeFieldLeftNull()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("error message, postcode field left null", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 182
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 183
- testRunner.Given("I have set the endpoint to <template>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 184
- testRunner.And("I have added a body without a postcode", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 185
- testRunner.When("I create a POST request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 186
- testRunner.When("I get a response back", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 187
  testRunner.Then("I should receive a Bad request response code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 188
+#line 181
  testRunner.And("I am displayed the correct error message for null postcode field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -989,7 +951,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("error message displayed, postcode field character limit reached", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 190
+#line 183
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -999,22 +961,22 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 191
+#line 184
  testRunner.Given("I have set the endpoint to <template>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 192
+#line 185
  testRunner.And("I have added a body with postcode over the 8 character limit", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 193
+#line 186
  testRunner.When("I create a POST request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 194
+#line 187
  testRunner.When("I get a response back", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 195
+#line 188
  testRunner.Then("I should receive a Bad request response code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 196
+#line 189
  testRunner.And("I am displayed the correct error message for postcode character limit being reach" +
                         "ed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -1029,6 +991,42 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("valid submission, correct postcode values entered", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 191
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 192
+ testRunner.Given("I have set the endpoint to <template>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 193
+ testRunner.And("I have added a body with postcode within the character character limits", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 194
+ testRunner.When("I create a POST request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 195
+ testRunner.When("I get a response back", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 196
+ testRunner.Then("I should receive a OK response code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("error message displayed, county field character limit reached")]
+        public void ErrorMessageDisplayedCountyFieldCharacterLimitReached()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("error message displayed, county field character limit reached", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 198
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -1043,7 +1041,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("I have set the endpoint to <template>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 200
- testRunner.And("I have added a body with postcode within the character character limits", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I have added a body with county over the 20 character limit", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 201
  testRunner.When("I create a POST request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -1052,45 +1050,9 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("I get a response back", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 203
- testRunner.Then("I should receive a OK response code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("error message displayed, county field character limit reached")]
-        public void ErrorMessageDisplayedCountyFieldCharacterLimitReached()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("error message displayed, county field character limit reached", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 205
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 206
- testRunner.Given("I have set the endpoint to <template>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 207
- testRunner.And("I have added a body with county over the 20 character limit", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 208
- testRunner.When("I create a POST request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 209
- testRunner.When("I get a response back", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 210
  testRunner.Then("I should receive a Bad request response code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 211
+#line 204
  testRunner.And("I am displayed the correct error message for county character limit being reached" +
                         "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -1105,6 +1067,42 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("valid submission, correct county values entered", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 206
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 207
+ testRunner.Given("I have set the endpoint to <template>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 208
+ testRunner.And("I have added a body with county within the character character limits", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 209
+ testRunner.When("I create a POST request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 210
+ testRunner.When("I get a response back", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 211
+ testRunner.Then("I should receive a OK response code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("valid submission, county field is null")]
+        public void ValidSubmissionCountyFieldIsNull()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("valid submission, county field is null", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 213
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -1119,7 +1117,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("I have set the endpoint to <template>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 215
- testRunner.And("I have added a body with county within the character character limits", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I have added a body with county field null", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 216
  testRunner.When("I create a POST request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -1135,49 +1133,13 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("valid submission, county field is null")]
-        public void ValidSubmissionCountyFieldIsNull()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("valid submission, county field is null", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 220
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 221
- testRunner.Given("I have set the endpoint to <template>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 222
- testRunner.And("I have added a body with county field null", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 223
- testRunner.When("I create a POST request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 224
- testRunner.When("I get a response back", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 225
- testRunner.Then("I should receive a OK response code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("error message displayed, phone number field character limit reached")]
         public void ErrorMessageDisplayedPhoneNumberFieldCharacterLimitReached()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("error message displayed, phone number field character limit reached", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 228
+#line 221
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -1187,22 +1149,22 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 229
+#line 222
  testRunner.Given("I have set the endpoint to <template>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 230
+#line 223
  testRunner.And("I have added a body with a phone number over the 20 character limit", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 231
+#line 224
  testRunner.When("I create a POST request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 232
+#line 225
  testRunner.When("I get a response back", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 233
+#line 226
  testRunner.Then("I should receive a Bad request response code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 234
+#line 227
  testRunner.And("I am displayed the correct error message for a phone number character limit being" +
                         " reached", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -1217,6 +1179,42 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("valid submission, correct phone number values entered", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 229
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 230
+ testRunner.Given("I have set the endpoint to <template>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 231
+ testRunner.And("I have added a body with a phone number within the character character limits", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 232
+ testRunner.When("I create a POST request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 233
+ testRunner.When("I get a response back", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 234
+ testRunner.Then("I should receive a OK response code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("valid submission, phone number field is null")]
+        public void ValidSubmissionPhoneNumberFieldIsNull()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("valid submission, phone number field is null", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 236
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -1231,7 +1229,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("I have set the endpoint to <template>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 238
- testRunner.And("I have added a body with a phone number within the character character limits", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I have added a body with the phone number field null", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 239
  testRunner.When("I create a POST request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -1247,12 +1245,12 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("valid submission, phone number field is null")]
-        public void ValidSubmissionPhoneNumberFieldIsNull()
+        [NUnit.Framework.DescriptionAttribute("error message displayed, email field character limit reached")]
+        public void ErrorMessageDisplayedEmailFieldCharacterLimitReached()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("valid submission, phone number field is null", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("error message displayed, email field character limit reached", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 243
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -1267,7 +1265,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("I have set the endpoint to <template>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 245
- testRunner.And("I have added a body with the phone number field null", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I have added a body with a phone number over the 100 character limit", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 246
  testRunner.When("I create a POST request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -1276,45 +1274,9 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("I get a response back", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 248
- testRunner.Then("I should receive a OK response code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("error message displayed, email field character limit reached")]
-        public void ErrorMessageDisplayedEmailFieldCharacterLimitReached()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("error message displayed, email field character limit reached", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 250
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 251
- testRunner.Given("I have set the endpoint to <template>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 252
- testRunner.And("I have added a body with a phone number over the 100 character limit", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 253
- testRunner.When("I create a POST request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 254
- testRunner.When("I get a response back", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 255
  testRunner.Then("I should receive a Bad request response code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 256
+#line 249
  testRunner.And("I am displayed the correct error message for a email character limit being reache" +
                         "d", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -1329,6 +1291,42 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("valid submission, correct email values entered", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 251
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 252
+ testRunner.Given("I have set the endpoint to <template>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 253
+ testRunner.And("I have added a body with a email within the character character limits", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 254
+ testRunner.When("I create a POST request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 255
+ testRunner.When("I get a response back", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 256
+ testRunner.Then("I should receive a OK response code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("valid submission, email field is null")]
+        public void ValidSubmissionEmailFieldIsNull()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("valid submission, email field is null", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 258
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -1343,7 +1341,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("I have set the endpoint to <template>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 260
- testRunner.And("I have added a body with a email within the character character limits", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I have added a body with the email field null", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 261
  testRunner.When("I create a POST request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -1359,12 +1357,12 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("valid submission, email field is null")]
-        public void ValidSubmissionEmailFieldIsNull()
+        [NUnit.Framework.DescriptionAttribute("error message displayed, mobile number field character limit reached")]
+        public void ErrorMessageDisplayedMobileNumberFieldCharacterLimitReached()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("valid submission, email field is null", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("error message displayed, mobile number field character limit reached", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 265
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -1379,7 +1377,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("I have set the endpoint to <template>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 267
- testRunner.And("I have added a body with the email field null", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I have added a body with a mobile number over the 20 character limit", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 268
  testRunner.When("I create a POST request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -1388,45 +1386,9 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("I get a response back", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 270
- testRunner.Then("I should receive a OK response code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("error message displayed, mobile number field character limit reached")]
-        public void ErrorMessageDisplayedMobileNumberFieldCharacterLimitReached()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("error message displayed, mobile number field character limit reached", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 272
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 273
- testRunner.Given("I have set the endpoint to <template>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 274
- testRunner.And("I have added a body with a mobile number over the 20 character limit", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 275
- testRunner.When("I create a POST request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 276
- testRunner.When("I get a response back", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 277
  testRunner.Then("I should receive a Bad request response code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 278
+#line 271
  testRunner.And("I am displayed the correct error message for a mobile number character limit bein" +
                         "g reached", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -1441,6 +1403,42 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("valid submission, correct mobile number values entered", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 273
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 274
+ testRunner.Given("I have set the endpoint to <template>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 275
+ testRunner.And("I have added a body with a mobile number within the character character limits", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 276
+ testRunner.When("I create a POST request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 277
+ testRunner.When("I get a response back", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 278
+ testRunner.Then("I should receive a OK response code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("valid submission, mobile number field is null")]
+        public void ValidSubmissionMobileNumberFieldIsNull()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("valid submission, mobile number field is null", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 280
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -1455,7 +1453,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("I have set the endpoint to <template>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 282
- testRunner.And("I have added a body with a mobile number within the character character limits", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I have added a body with the mobile number field null", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 283
  testRunner.When("I create a POST request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -1471,49 +1469,13 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("valid submission, mobile number field is null")]
-        public void ValidSubmissionMobileNumberFieldIsNull()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("valid submission, mobile number field is null", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 287
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 288
- testRunner.Given("I have set the endpoint to <template>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 289
- testRunner.And("I have added a body with the mobile number field null", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 290
- testRunner.When("I create a POST request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 291
- testRunner.When("I get a response back", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 292
- testRunner.Then("I should receive a OK response code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("error message displayed, occupation postion field character limit reached")]
         public void ErrorMessageDisplayedOccupationPostionFieldCharacterLimitReached()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("error message displayed, occupation postion field character limit reached", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 295
+#line 288
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -1523,22 +1485,22 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 296
+#line 289
  testRunner.Given("I have set the endpoint to <template>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 297
+#line 290
  testRunner.And("I have added a body with a occupation postion over the 30 character limit", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 298
+#line 291
  testRunner.When("I create a POST request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 299
+#line 292
  testRunner.When("I get a response back", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 300
+#line 293
  testRunner.Then("I should receive a Bad request response code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 301
+#line 294
  testRunner.And("I am displayed the correct error message for a occupation postion character limit" +
                         " being reached", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -1553,6 +1515,43 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("valid submission, correct occupation postion values entered", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 296
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 297
+ testRunner.Given("I have set the endpoint to <template>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 298
+ testRunner.And("I have added a body with a occupation postion within the character character limi" +
+                        "ts", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 299
+ testRunner.When("I create a POST request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 300
+ testRunner.When("I get a response back", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 301
+ testRunner.Then("I should receive a OK response code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("valid submission, occupation postion field is null")]
+        public void ValidSubmissionOccupationPostionFieldIsNull()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("valid submission, occupation postion field is null", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 303
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -1567,8 +1566,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("I have set the endpoint to <template>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 305
- testRunner.And("I have added a body with a occupation postion within the character character limi" +
-                        "ts", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I have added a body with the occupation postion field null", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 306
  testRunner.When("I create a POST request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -1584,12 +1582,12 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("valid submission, occupation postion field is null")]
-        public void ValidSubmissionOccupationPostionFieldIsNull()
+        [NUnit.Framework.DescriptionAttribute("error message displayed, occupation employer name field character limit reached")]
+        public void ErrorMessageDisplayedOccupationEmployerNameFieldCharacterLimitReached()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("valid submission, occupation postion field is null", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("error message displayed, occupation employer name field character limit reached", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 310
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -1604,7 +1602,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("I have set the endpoint to <template>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 312
- testRunner.And("I have added a body with the occupation postion field null", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I have added a body with a occupation employer name over the 30 character limit", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 313
  testRunner.When("I create a POST request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -1613,45 +1611,9 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("I get a response back", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 315
- testRunner.Then("I should receive a OK response code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("error message displayed, occupation employer name field character limit reached")]
-        public void ErrorMessageDisplayedOccupationEmployerNameFieldCharacterLimitReached()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("error message displayed, occupation employer name field character limit reached", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 317
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 318
- testRunner.Given("I have set the endpoint to <template>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 319
- testRunner.And("I have added a body with a occupation employer name over the 30 character limit", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 320
- testRunner.When("I create a POST request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 321
- testRunner.When("I get a response back", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 322
  testRunner.Then("I should receive a Bad request response code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 323
+#line 316
  testRunner.And("I am displayed the correct error message for a occupation employer name character" +
                         " limit being reached", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -1666,6 +1628,43 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("valid submission, correct occupation employer name values entered", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 318
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 319
+ testRunner.Given("I have set the endpoint to <template>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 320
+ testRunner.And("I have added a body with a occupation employer name within the character characte" +
+                        "r limits", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 321
+ testRunner.When("I create a POST request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 322
+ testRunner.When("I get a response back", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 323
+ testRunner.Then("I should receive a OK response code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("error message, occupation employer name field is null")]
+        public void ErrorMessageOccupationEmployerNameFieldIsNull()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("error message, occupation employer name field is null", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 325
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -1680,8 +1679,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("I have set the endpoint to <template>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 327
- testRunner.And("I have added a body with a occupation employer name within the character characte" +
-                        "r limits", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I have added a body with the occupation employer name field null", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 328
  testRunner.When("I create a POST request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -1690,45 +1688,9 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("I get a response back", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 330
- testRunner.Then("I should receive a OK response code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("error message, occupation employer name field is null")]
-        public void ErrorMessageOccupationEmployerNameFieldIsNull()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("error message, occupation employer name field is null", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 332
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 333
- testRunner.Given("I have set the endpoint to <template>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 334
- testRunner.And("I have added a body with the occupation employer name field null", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 335
- testRunner.When("I create a POST request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 336
- testRunner.When("I get a response back", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 337
  testRunner.Then("I should receive a Bad request response code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 338
+#line 331
  testRunner.And("I am displayed the correct error message for a occupation employer name field bei" +
                         "ng null", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -1743,7 +1705,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("error message, incorrect date formatting for bank date from", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 340
+#line 333
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -1753,22 +1715,22 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 341
+#line 334
  testRunner.Given("I have set the endpoint to <template>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 342
+#line 335
  testRunner.And("I have added a body with bank date from incorrectly formatted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 343
+#line 336
  testRunner.When("I create a POST request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 344
+#line 337
  testRunner.When("I get a response back", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 345
+#line 338
  testRunner.Then("I should receive a Bad request response code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 346
+#line 339
  testRunner.And("I am displayed the correct error message for bank date from incorrectly formatted" +
                         "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -1783,7 +1745,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("valid submission, correct bank date from values entered", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 348
+#line 341
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -1793,19 +1755,19 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 349
+#line 342
  testRunner.Given("I have set the endpoint to <template>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 350
+#line 343
  testRunner.And("I have added a body with valid bank date from formatted correctly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 351
+#line 344
  testRunner.When("I create a POST request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 352
+#line 345
  testRunner.When("I get a response back", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 353
+#line 346
  testRunner.Then("I should receive a OK response code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
