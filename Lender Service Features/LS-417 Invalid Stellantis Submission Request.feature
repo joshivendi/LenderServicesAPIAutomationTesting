@@ -11,22 +11,21 @@ Scenario: valid submission
 	And I have added a body with a valid submission
 	Then I should receive a Bad request response code
 
+##Vehicles
+#Scenario: error message displayed, vechile milage over 60000
+#	Given I have set the endpoint to lenderservicev3api/api/consumersubmission/send
+#	When I have set the api key in the header
+#	And I have added a body with a invalid milage over 6000
+#	Then I should receive a Bad request response code
+#	And I am displayed the correct error message for incorrect vechile input
 
-#Vehicles
-Scenario: error message displayed, vechile milage over 60000
-	Given I have set the endpoint to lenderservicev3api/api/consumersubmission/send
-	When I have set the api key in the header
-	And I have added a body with a invalid milage over 6000
-	Then I should receive a Bad request response code
-	And I am displayed the correct error message for incorrect vechile input
-
-#Applicant
-Scenario: error message displayed, first name field null
-	Given I have set the endpoint to lenderservicev3api/api/consumersubmission/send
-	When I have set the api key in the header
-	And I have added a body without a first name
-	Then I should receive a Bad request response code
-	And I am displayed the correct error message for null first name field
+##Applicant
+#Scenario: error message displayed, first name field null
+#	Given I have set the endpoint to lenderservicev3api/api/consumersubmission/send
+#	When I have set the api key in the header
+#	And I have added a body without a first name
+#	Then I should receive a Bad request response code
+#	And I am displayed the correct error message for null first name field
 
 Scenario: error message displayed, first name character limit reached
 	Given I have set the endpoint to lenderservicev3api/api/consumersubmission/send

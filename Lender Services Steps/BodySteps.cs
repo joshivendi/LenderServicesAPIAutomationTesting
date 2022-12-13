@@ -91,6 +91,5 @@ namespace apiPrepTestingFramework.QA.Lender_Services_Steps
             var test = System.Text.Json.JsonSerializer.Serialize(bodyTest);
             restRequest.AddJsonBody(bodyTest);
         }
-
     }
 }
