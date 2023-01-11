@@ -8,6 +8,7 @@ using apiPrepTestingFramework.QA.Extensions;
 using System.Collections.Specialized;
 using System;
 using apiPrepTestingFramework.QA.Models;
+using Microsoft.VisualStudio.TestPlatform.CommunicationUtilities.Serialization;
 
 namespace apiPrepTestingFramework.QA.Helpers
 {
@@ -121,34 +122,34 @@ namespace apiPrepTestingFramework.QA.Helpers
         public static Submissions ValidSubmission => new Submissions()
         {
             AddOnCosts = 0.0m,
-                Affordability = new Affordability
-                {
-                    ForeseeFutureDownturnInFinances = false,
-                    GrossAnnualIncome = "30000.00",
-                    DownturnReason = null,
-                    MortageOrRentExpenditure = "1200.00",
-                    OtherCommittedMonthlyOutgoings = "100.00",
-                    ReplacementLoanAmount = null,
-                    ReplacementLoan = false,
-                    ExpectedChangesInCircumstances = false,
-                    NetMonthlyIncome = "2000.00"
-                },
-                AnnualDistanceQuoted = 10000,
-                ApplicantAccountName = "Michael Test",
-                ApplicantAccountNumber = "71070177",
-                SettlementSource = "",
-                ApplicantMonthsWithBank = 120,
-                ApplicantSortcode = "403810",
-                ApplicantBankName = "BARCLAYS BANK PLC",
-                ApplicantBankAddressLine1 = "",
-                ApplicantBankAddressLine2 = "",
-                ApplicantBankPostTown = "Leicester",
-                ApplicantBankPostcode = "LE87 2BB",
-                ApplicantBankPhone = "0345 7345345",
-                ApplicantIsBoardMemberOrDirector = null,
-                ApplicantCountryOfOperation = null,
-                ApplicantMarketingDisclaimerVersionId = null,
-                Applicants = new List<Applicant>
+            Affordability = new Affordability
+            {
+                ForeseeFutureDownturnInFinances = false,
+                GrossAnnualIncome = "30000.00",
+                DownturnReason = null,
+                MortageOrRentExpenditure = "1200.00",
+                OtherCommittedMonthlyOutgoings = "100.00",
+                ReplacementLoanAmount = null,
+                ReplacementLoan = false,
+                ExpectedChangesInCircumstances = false,
+                NetMonthlyIncome = "2000.00"
+            },
+            AnnualDistanceQuoted = 10000,
+            ApplicantAccountName = "Michael Test",
+            ApplicantAccountNumber = "71070177",
+            SettlementSource = "",
+            ApplicantMonthsWithBank = 120,
+            ApplicantSortcode = "403810",
+            ApplicantBankName = "BARCLAYS BANK PLC",
+            ApplicantBankAddressLine1 = "",
+            ApplicantBankAddressLine2 = "",
+            ApplicantBankPostTown = "Leicester",
+            ApplicantBankPostcode = "LE87 2BB",
+            ApplicantBankPhone = "0345 7345345",
+            ApplicantIsBoardMemberOrDirector = null,
+            ApplicantCountryOfOperation = null,
+            ApplicantMarketingDisclaimerVersionId = null,
+            Applicants = new List<Applicant>
                 {
                         new Applicant
                         {
@@ -219,72 +220,72 @@ namespace apiPrepTestingFramework.QA.Helpers
 
                         }
                 },
-                IARProspectId = null,
-                ArrangedByPhone = false,
-                ArrangedInShowroom = false,
-                ArrangedOnline = true,
-                BusinessUse = false,
-                ChargePerOverDistanceUnit = 0.0m,
-                DealershipId = "c4991e72-eb51-42a1-959d-239917a5ae52",
-                DistanceMarketed = false,
-                FinanceDepositAllowance = 0.0m,
-                FunderCode = "STE",
-                FunderProductCode = "CLOHP1",
-                GlassModelId = null,
-                GlassQualifyModelId = null,
-                HighNetWorth = false,
-                NoDependants = "0",
-                Notes = null,
-                NotesAuthor = null,
-                OutstandingSettlement = 0.0m,
-                QuoteAPR = 11.9m,
-                QuoteAcceptanceFeeFirst = 0.0m,
-                QuoteAcceptanceFeeLast = null,
-                QuoteAcceptanceFeeSpread = false,
-                QuoteAdvance = 15900.0m,
-                QuoteBalloon = 0.0m,
-                QuoteBaseRate = 10.9m,
-                QuoteCashPrice = 15900.0m,
-                QuoteActualCashDeposit = 0.0m,
-                QuoteVehiclePrice = 15900.0m,
-                QuoteCondition = "Used",
-                IsUsedVehicle = true,
-                QuoteCustomerRate = 11.9m,
-                RateType = "APR",
-                FlatRate = 6.18m,
-                QuoteDeposit = 0.0m,
-                QuoteFinalPaymentAmount = 423.07m,
-                QuoteFinanceType = "HP",
-                QuoteFirstPaymentAmount = 413.07m,
-                QuoteFollowedBy = 46,
-                QuoteId = "12031200-19a6-4aa4-aeed-62034fb7ac75",
-                QuoteInterestCharges = 3927.36m,
-                TotalAmountPayable = 19837.36m,
-                QuoteInitialPauseMonths = 0,
-                QuoteInterestRate = 6.18m,
-                QuotePartExchange = 0.0m,
-                QuotePurchaseFee = 10.0m,
-                QuotePurchaseFeeSpread = false,
-                QuoteRegularPaymentAmount = 413.07m,
-                QuoteTerm = 48,
-                QuoteTermQuoted = 48,
-                QuoteVATIncluded = false,
-                QuoteVATQualifying = false,
-                QuoteVehicleCapCode = "VAGX12SE 5HPTM",
-                QuoteVehicleCapId = "81212",
-                QuoteVehicleClass = "Car",
-                QuoteVehicleDerivative = "1.2 Turbo SE 5dr",
-                QuoteVehicleMileage = 1100,
-                QuoteVehicleModel = "GRANDLAND X HATCHBACK",
-                QuoteVehicleRegDate = "2020-03-31T00:00:00Z",
-                QuoteVehicleVrm = "DY20FAM",
-                QuoteeProductCode = "HP1",
-                SubmittersEmail = "",
-                SubmittersName = null,
-                SubmittersPhone = null,
-                SourceUrl = null,
-                Commission = 1374.58m,
-                Commissions = new Commission[]
+            IARProspectId = null,
+            ArrangedByPhone = false,
+            ArrangedInShowroom = false,
+            ArrangedOnline = true,
+            BusinessUse = false,
+            ChargePerOverDistanceUnit = 0.0m,
+            DealershipId = "c4991e72-eb51-42a1-959d-239917a5ae52",
+            DistanceMarketed = false,
+            FinanceDepositAllowance = 0.0m,
+            FunderCode = "STE",
+            FunderProductCode = "CLOHP1",
+            GlassModelId = null,
+            GlassQualifyModelId = null,
+            HighNetWorth = false,
+            NoDependants = "0",
+            Notes = null,
+            NotesAuthor = null,
+            OutstandingSettlement = 0.0m,
+            QuoteAPR = 11.9m,
+            QuoteAcceptanceFeeFirst = 0.0m,
+            QuoteAcceptanceFeeLast = null,
+            QuoteAcceptanceFeeSpread = false,
+            QuoteAdvance = 15900.0m,
+            QuoteBalloon = 0.0m,
+            QuoteBaseRate = 10.9m,
+            QuoteCashPrice = 15900.0m,
+            QuoteActualCashDeposit = 0.0m,
+            QuoteVehiclePrice = 15900.0m,
+            QuoteCondition = "Used",
+            IsUsedVehicle = true,
+            QuoteCustomerRate = 11.9m,
+            RateType = "APR",
+            FlatRate = 6.18m,
+            QuoteDeposit = 0.0m,
+            QuoteFinalPaymentAmount = 423.07m,
+            QuoteFinanceType = "HP",
+            QuoteFirstPaymentAmount = 413.07m,
+            QuoteFollowedBy = 46,
+            QuoteId = "12031200-19a6-4aa4-aeed-62034fb7ac75",
+            QuoteInterestCharges = 3927.36m,
+            TotalAmountPayable = 19837.36m,
+            QuoteInitialPauseMonths = 0,
+            QuoteInterestRate = 6.18m,
+            QuotePartExchange = 0.0m,
+            QuotePurchaseFee = 10.0m,
+            QuotePurchaseFeeSpread = false,
+            QuoteRegularPaymentAmount = 413.07m,
+            QuoteTerm = 48,
+            QuoteTermQuoted = 48,
+            QuoteVATIncluded = false,
+            QuoteVATQualifying = false,
+            QuoteVehicleCapCode = "VAGX12SE 5HPTM",
+            QuoteVehicleCapId = "81212",
+            QuoteVehicleClass = "Car",
+            QuoteVehicleDerivative = "1.2 Turbo SE 5dr",
+            QuoteVehicleMileage = 1100,
+            QuoteVehicleModel = "GRANDLAND X HATCHBACK",
+            QuoteVehicleRegDate = "2020-03-31T00:00:00Z",
+            QuoteVehicleVrm = "DY20FAM",
+            QuoteeProductCode = "HP1",
+            SubmittersEmail = "",
+            SubmittersName = null,
+            SubmittersPhone = null,
+            SourceUrl = null,
+            Commission = 1374.58m,
+            Commissions = new Commission[]
                 {
                     new Commission
                     {
@@ -296,33 +297,80 @@ namespace apiPrepTestingFramework.QA.Helpers
 
                     }
                 },
-                ValueAddedProduct = null,
-                VehicleMake = "VAUXHALL",
-                VehicleVin = "W0VZRHNS0L6016258",
-                ClientAppName = "ivendi-dealer-platform",
-                ClientAppVersion = "2",
-                Warranty = 0.0m,
-                OtherAccessories = 0.0m,
-                Insurance = 0.0m,
-                SubsidyRate = null,
-                SubsidyType = 0,
-                KnowYourCustomer = new Knowyourcustomer
+            ValueAddedProduct = null,
+            VehicleMake = "VAUXHALL",
+            VehicleVin = "W0VZRHNS0L6016258",
+            ClientAppName = "ivendi-dealer-platform",
+            ClientAppVersion = "2",
+            Warranty = 0.0m,
+            OtherAccessories = 0.0m,
+            Insurance = 0.0m,
+            SubsidyRate = null,
+            SubsidyType = 0,
+            KnowYourCustomer = new Knowyourcustomer
+            {
+                ApplicantCountryOfBirth = "GB",
+                ApplicantDirectorOrBoardMemberCountryOfOperation = null,
+                ApplicantDirectorOrBoardMemberPosition = "",
+                ApplicantDirectorOrBoardMemberCompanySector = null,
+            },
+            PrivacyPolicy = new Privacypolicy
+            {
+                ApplicantLenderMarketingByEmailConsent = false,
+                ApplicantLenderMarketingDisclaimerVersionId = null
+            },
+            VatNumber = "",
+            MetaDataCashPrice = 15900.00m,
+            MetaDataVehiclePrice = 15900.00m,
+            MetadataHasNegativeEquityLoan = false,
+            MetadataHasVapsLoan = false,
+        };
+
+        public static QuoteWareSubmissionV3 QuoteWareSubmissionV3 => new QuoteWareSubmissionV3()
+        {
+            Credentials = new Credentials
+            {
+                Username = "ivendi",
+                Mode = 0
+            },
+            QuoteRequests = new Quoterequest[]
+            {
+                new Quoterequest
                 {
-                    ApplicantCountryOfBirth = "GB",
-                    ApplicantDirectorOrBoardMemberCountryOfOperation = null,
-                    ApplicantDirectorOrBoardMemberPosition = "",
-                    ApplicantDirectorOrBoardMemberCompanySector = null,
-                },
-                PrivacyPolicy = new Privacypolicy
-                {
-                    ApplicantLenderMarketingByEmailConsent = false,
-                    ApplicantLenderMarketingDisclaimerVersionId = null
-                },
-                VatNumber = "",
-                MetaDataCashPrice = 15900.00m,
-                MetaDataVehiclePrice = 15900.00m,
-                MetadataHasNegativeEquityLoan = false,
-                MetadataHasVapsLoan = false,
-            };
-    }
-}
+                    QuoteeUID = "f7648f6b-f47e-6a28-aad1-ca9a97c75374",
+                    Requests = new Request[]
+                    {
+                        new Request
+                        {
+                            Figures = new Figures
+                            {
+                                CashPrice = 15000,
+                                CashDeposit = 0,
+                                Asset = new Asset
+                                {
+                                    ManualResidualValue = 0,
+                                    ValueAddedProducts = new Valueaddedproduct[]
+                                    {
+                                        new Valueaddedproduct
+                                        {
+                                            Description = "Test Description",
+                                            GrossPrice = 1500,
+                                            ID = "2b0c5237-ec09-4394-ae46-e31451354f2c",
+                                            Name = "Test Dealer Vap",
+                                            TaxCode = 1,
+                                            Type = "Paint Protection",
+                                            TypeCode = 15
+                                        },
+                            },
+                                CurrentOdometerReading = 1300,
+                                RegistrationDate = "04/06/2017",
+                                Identity = "VW",
+                                IdentityType = "RVC",
+                                },
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        }

@@ -37,13 +37,6 @@ namespace apiPrepTestingFramework.QA.Lender_Services_Steps
         [When(@"I have set the api key in the header")]
         public void WhenIHaveSetTheApiKeyInTheHeader()
         {
-            //var response = _context.Get<IRestResponse>("apiKey");
-            //var client = new RestClient("http://lender-services-v3-api.lender-services-v3-dev.svc.cluster.local/api/consumersubmission/send");
-            //var request = new RestRequest("", Method.POST);
-            //request.AddHeader("Content-Type", "application/json");
-            //request.AddHeader("ApiKey", "dGhlaG9seXRyaW5pdHktZGV2");
-            //IRestResponse testResponse = client.Execute(request);
-
             var restRequest = Helper.CreatePostRequest();
             restRequest.AddHeader("ApiKey", "dGhlaG9seXRyaW5pdHktZGV2");
             _context.Add("request", restRequest);

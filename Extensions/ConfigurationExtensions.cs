@@ -33,5 +33,10 @@ namespace apiPrepTestingFramework.QA.Extensions
         {
             return config.GetValue<string>("FirstNameCharacterLimitReached");
         }
+
+        public static string QuoteWareVersionThreeQuoteEndpoint(this IConfiguration config)
+        {
+            return config.GetValue<string>("QuoteWareVersionThreeQuoteEndpoint");
+        }
     }
 }
