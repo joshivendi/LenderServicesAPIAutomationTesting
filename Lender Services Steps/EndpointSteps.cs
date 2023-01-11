@@ -1,6 +1,7 @@
 ﻿using apiPrepTestingFramework.QA.Extensions;
 using apiPrepTestingFramework.QA.Helpers;
 using Microsoft.Extensions.Configuration;
+using RestSharp;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -43,5 +44,11 @@ namespace apiPrepTestingFramework.QA.Lender_Services_Steps
             Helper.SetURL(stellantisURL);
         }
 
+        [Given(@"I have set the endpoint to lenderservicev(.*)api/api/consumersubmission/send")]
+        public void GivenIHaveSetTheEndpointToLenderservicevapiApiConsumersubmissionSend(int p0)
+        {
+            var lenderServiceV3Api = _config.lenderServicesV3api();
+            Helper.SetURL(lenderServiceV3Api);
+        }
     }
 }

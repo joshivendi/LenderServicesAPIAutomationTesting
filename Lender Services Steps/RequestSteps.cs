@@ -1,5 +1,7 @@
-﻿using apiPrepTestingFramework.QA.Helpers;
+﻿using apiPrepTestingFramework.QA.Extensions;
+using apiPrepTestingFramework.QA.Helpers;
 using Microsoft.Extensions.Configuration;
+using RestSharp;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -12,6 +14,7 @@ namespace apiPrepTestingFramework.QA.Lender_Services_Steps
     {
         private readonly IConfiguration _config;
         private readonly ScenarioContext _context;
+        public static RestRequest restRequest;
 
         public RequestSteps(IConfiguration config, ScenarioContext context)
         {
@@ -29,6 +32,14 @@ namespace apiPrepTestingFramework.QA.Lender_Services_Steps
         public void WhenICreateAPOSTRequest()
         {
             Helper.CreatePostRequest();
+        }
+
+        [When(@"I have set the api key in the header")]
+        public void WhenIHaveSetTheApiKeyInTheHeader()
+        {
+            var restRequest = Helper.CreatePostRequest();
+            restRequest.AddHeader("ApiKey", "dGhlaG9seXRyaW5pdHktZGV2");
+            _context.Add("request", restRequest);
         }
     }
 }

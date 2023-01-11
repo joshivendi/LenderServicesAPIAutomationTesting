@@ -1,9 +1,11 @@
 ﻿using apiPrepTestingFramework.QA.Helpers;
+using apiPrepTestingFramework.QA.Models;
 using Microsoft.Extensions.Configuration;
 using NUnit.Framework;
 using RestSharp;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using System.Text;
 using TechTalk.SpecFlow;
@@ -47,16 +49,28 @@ namespace apiPrepTestingFramework.QA.Lender_Services_Steps
             Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.BadRequest));
         }
 
+        [Then(@"I am displayed the correct error message for null first name field")]
+        public void ThenIAmDisplayedTheCorrectErrorMessageForNullFirstNameField()
+        {
+            var response = Helper.GetResponse();
+            var firstNameNullField = Helper.GetContent<SubmissionsErrorResponse>(response);
+            Assert.AreEqual("'Applicant Forename' must not be empty.", firstNameNullField.errors.ApplicantForename.First());
+        }
 
-        //[Then(@"I should be displayed Users in the response")]
-        //public void ThenIShouldBeDisplayedUsersInTheResponse()
-        //{
-        //    var response = Helper.GetResponse();
-        //    var getUserDetails = Helper.GetContent<ListOfUsers>(response);
-        //    Assert.AreEqual(2, getUserDetails.Page);
-        //    Assert.AreEqual("Michael", getUserDetails.Data[0].first_name);
-        //    Assert.AreEqual("Lawson", getUserDetails.Data[0].last_name);
-        //    Console.WriteLine("User data is returning");
-        //}
+        [Then(@"I am displayed the correct error message for first name character limit being reached")]
+        public void ThenIAmDisplayedTheCorrectErrorMessageForFirstNameCharacterLimitBeingReached()
+        {
+            var response = Helper.GetResponse();
+            var firstNameNullField = Helper.GetContent<SubmissionsErrorResponse>(response);
+            Assert.AreEqual("The length of 'Applicant Forename' must be 25 characters or fewer. You entered 63 characters.", firstNameNullField.errors.ApplicantForename.First());
+        }
+
+        [Then(@"I am displayed the correct error message for null surname field")]
+        public void ThenIAmDisplayedTheCorrectErrorMessageForNullSurnameField()
+        {
+            var response = Helper.GetResponse();
+            var firstNameNullField = Helper.GetContent<SubmissionsErrorResponse>(response);
+            Assert.AreEqual("'Applicant Surname' must not be empty.", firstNameNullField.errors.ApplicantSurname.First());
+        }
     }
 }
